@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-box {
+  background: #6A0D1B;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.nav-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #6A0D1B;
+  font-weight: 500;
+}
+
+.cta-nav {
+  background: #6A0D1B;
+  color: #fff !important;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #666;
+}
+
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section.light {
+  background: #F5F5F5;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #6A0D1B;
+}
+
+.product-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 15px;
+  background: #6A0D1B;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #7B1E3A;
+}
+
+.center {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #6A0D1B;
+  color: #fff;
+}
