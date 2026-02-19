@@ -28,8 +28,12 @@ body {
 }
 
 .brand-name {
-  font-size: 1.2rem;
-  margin-left: 10px;
+  margin-left: 12px;       /* jarak dari logo */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;       /* bisa disesuaikan */
+  font-weight: 600;         /* semi-bold */
+  color: #800020;           /* burgundy ala iPhone 18, bisa disesuaikan */
+  white-space: nowrap;      /* mencegah wrap di mobile */
 }
 
 .nav-right {
