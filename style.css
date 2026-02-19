@@ -7,30 +7,33 @@ body {
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  border-bottom: 1px solid #eee;
+  padding: 10px 15px;
+  background-color: #800020;
+  color: #fff;
 }
 
 .logo-box {
-  background: #6A0D1B;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 700;
-  margin-right: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .brand-name {
-  font-weight: 600;
-  margin-right: auto;
+  font-size: 1.2rem;
+}
+
+.nav-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .nav-right a {
-  margin-left: 20px;
+  color: #fff;
   text-decoration: none;
-  color: #6A0D1B;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .cta-nav {
