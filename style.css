@@ -14,45 +14,65 @@ body {
 ============================== */
 .navbar {
   display: flex;
-  flex-wrap: wrap;            /* Biar turun baris otomatis di mobile */
+  flex-wrap: wrap;           
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: #800020;  /* Burgundy ala iPhone 18 */
   color: #fff;
 }
 
-.logo-box {
-  font-weight: bold;
-  font-size: 1.5rem;
+/* Logo + Brand container */
+.logo-brand {
+  display: flex;
+  align-items: center;
 }
 
+/* Logo gambar */
+.logo-box img {
+  display: block;
+  max-height: 40px;          /* proporsional */
+}
+
+/* Brand-name */
 .brand-name {
-  margin-left: 12px;       /* jarak dari logo */
+  margin-left: 12px;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;       /* bisa disesuaikan */
-  font-weight: 600;         /* semi-bold */
-  color: #800020;           /* burgundy ala iPhone 18, bisa disesuaikan */
-  white-space: nowrap;      /* mencegah wrap di mobile */
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;               /* putih agar terlihat di navbar burgundy */
+  white-space: nowrap;
 }
 
+/* Navigation links */
 .nav-right {
   display: flex;
-  flex-wrap: wrap;            /* Sangat penting supaya link tidak menindih di mobile */
-  gap: 10px;                  /* Jarak antar link */
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-right a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
 
+.nav-right a:hover,
+.nav-right .cta-nav:hover {
+  background-color: #ff6666; /* sedikit highlight saat hover */
+}
+
+/* CTA WhatsApp button */
 .nav-right .cta-nav {
   background-color: #fff;
   color: #800020;
-  padding: 5px 10px;
-  border-radius: 5px;
+  font-weight: 600;
 }
 
 /* ==============================
