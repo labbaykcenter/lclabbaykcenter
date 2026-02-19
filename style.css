@@ -36,9 +36,9 @@ body {
 
 /* Brand-name */
 .brand-name {
-  margin-left: 12px;
+  margin-left: 10px;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #fff;               /* putih agar terlihat di navbar burgundy */
   white-space: nowrap;
@@ -69,9 +69,11 @@ body {
 }
 
 /* CTA WhatsApp button */
-.nav-right .cta-nav {
-  background-color: #fff;
+.nav-right a.cta-nav {
+  background-color: #fff;       /* ★ tombol WA berbeda warna */
   color: #800020;
+  padding: 6px 12px;
+  border-radius: 4px;
   font-weight: 600;
 }
 
@@ -79,92 +81,110 @@ body {
    HERO SECTION
 ============================== */
 .hero {
+  padding: 60px 20px;                       /* ★ lebih lega */
   text-align: center;
-  padding: 40px 20px;
-  background: #f7f7f7;
+  background: linear-gradient(120deg, #fdf6f6, #ffe6eb); /* ★ gradient lembut */
 }
 
 .hero h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;                           /* ★ lebih besar & modern */
   margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1rem;
-  margin-bottom: 20px;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 25px auto;
+  font-size: 1rem;                           /* ★ responsif dan mudah dibaca */
 }
 
 .btn-primary {
+  display: inline-block;
   background-color: #800020;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #a10035;                 /* ★ hover effect */
 }
 
 /* ==============================
    SECTION
 ============================== */
 .section {
-  padding: 30px 20px;
-  text-align: center;
+  padding: 40px 20px;
 }
 
 .section.light {
-  background: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 /* ==============================
    GRID / CARD
 ============================== */
 .grid-4 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.grid-4 .card {
-  background: #fff;
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ========== CARD ========== */
+.card, .product-card {
+  background-color: #fff;
   border-radius: 8px;
   padding: 15px;
-  width: 220px;
-  text-align: left;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.grid-3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.grid-3 .product-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 180px;
   text-align: center;
-  border-radius: 8px;
-  background: #fff;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.grid-3 .product-card:hover {
-  transform: translateY(-5px);
+.card:hover, .product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.grid-3 .product-card a {
+/* ========== PRODUCT CARD ========== */
+.product-card img.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* Buttons for product cards */
+.btn-secondary {
   display: inline-block;
-  margin-top: 10px;
-  background-color: #800020;
-  color: #fff;
-  padding: 5px 10px;
+  background-color: #f0f0f0;
+  color: #800020;
+  padding: 6px 12px;
   border-radius: 5px;
-  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #e0d4d4;
 }
 
 /* ==============================
@@ -174,27 +194,32 @@ body {
   text-align: center;
 }
 
-.section.center a.btn-primary {
-  margin-top: 10px;
-}
-
-/* ==============================
-   FOOTER
-============================== */
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #f1f1f1;
+  padding: 20px;
+  background-color: #800020;
+  color: #fff;
   font-size: 0.9rem;
 }
 
-/* ==============================
-   MEDIA QUERY MOBILE
-============================== */
-@media screen and (max-width: 480px) {
-  .logo-box { font-size: 1.2rem; }
-  .brand-name { font-size: 1rem; }
-  .nav-right a { font-size: 0.85rem; }
-  .hero h1 { font-size: 1.5rem; }
-  .grid-4 .card, .grid-3 .product-card { width: 100%; max-width: 250px; }
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+  
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero p {
+    font-size: 0.95rem;
+  }
 }
